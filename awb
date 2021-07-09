@@ -1,7 +1,7 @@
 #!/bin/bash
    clear
    echo "ARC_site"
-   echo "[==[v1.5i]===]]"
+   echo "[==[v1.6i]===]]"
    date
    echo ":::::::::::::::"
    echo " "
@@ -84,7 +84,7 @@ clear
 clear
 echo " selesai
 "
-
+;;
 
 *)
 
