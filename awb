@@ -1,7 +1,10 @@
 #!/bin/bash
-   clear
+clear
+rm -r linux_pc_FS
+mkdir android_FS
+clear
    echo "ARC_site"
-   echo "[==[v1.8i]===]]"
+   echo "[==[v5.2i]===]]"
    date
    echo ":::::::::::::::"
    echo " "
@@ -10,8 +13,9 @@
    echo "+[3] update"
    echo "+[4] uninstall"
    echo "+[5] buat daftar website"
-   read -p "pilih nomor :" pil;
-       case $pil in
+   echo "+[6] pc_mode"
+   read -p "pilih nomor :" pilan;
+       case $pilan in
 
 1)
 
@@ -75,29 +79,131 @@
 ;;
 
 5)
+
+
  echo "apa yang ingin anda masukan ke daftar?"
- read textdft
- mkdir $textdft
+ read textpc
+ mkdir $textpc
 
 clear
  echo "membuat file..."
 clear
-echo " selesai
+echo "selesai"
 
 cd
 cd
 cd arcsite
 bash awb
 
-"
 ;;
 
-*)
+6)
 
-  echo "typo ,kepencet ato gmn ngab?:V"
+rm -r android_FS
+
+mkdir linux_pc_FS
+ 
+clear
   
+
+
+   echo "ARC_site_pc"
+   echo "[==[v5.2i]PC_I===]]"
+   date
+   echo ":::::::::::::::"
+   echo " "
+   echo "+[1p] cek apakah website masih aktif"
+   echo "+[2p] critical hack website"
+   echo "+[3p] update"
+   echo "+[4p] uninstall"
+   echo "+[5p] buat daftar website"
+
+   read -p "pilih nomor :" pilpc;
+       case $pilpc in
+
+1p)
+
+   clear
+   echo "[masukkan ip website]"
+   read weblinkpc
+   read $weblinkpc
+   echo "jika hasil tidak error/semua hasil adalah no reply artinya website tidak aktif"
+
 ;;
+
+2p)
+
+   clear
+   echo "menginstall sqlmap..."
+
+  sudo apt-get install sqlmap
+
+   clear
+   
+   clear
+   echo "untuk hack situs ujung situs harus ada [php?id=1]"
+   echo "masukkan link website"
+   read weblinkwebpc
+   sqlmap -u $weblinkwebpc --dbs
+   echo "masukan database table"
+   read db
+   sqlmap -u $weblinkwebpc --db_table $db
+
+;;
+
+3p)
+
+  clear
+  echo "updating..."
+  cd  
+  cd
+  rm -r arcsite
+  git clone https://github.com/afri64/arcsite
+  cd
+  cd
+  cd arcsite 
+  bash awb
+
+;;
+
+4p)
+  
+  clear
+  echo "uninstalling.."
+  cd
+  cd
+  rm -r arcsite
+  clear
+  echo "uninstallation complete"
+
+;;
+
+5p)
+
+ echo "apa yang ingin anda masukan ke daftar?"
+ read textdft
+ echo "masukkan nama file"
+ read namafile
+
+ mkdir $namafile
+
+ echo " $textdft " > $namafile
+
+clear
+ echo "membuat file $namafile ..."
+clear
+echo " selesai "
+
+cd
+cd
+cd arcsite
+bash awb 
+
+;;
+
 
 esac
+esac
+
 
  
