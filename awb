@@ -1,7 +1,7 @@
 #!/bin/bash
    clear
    echo "ARC_site"
-   echo "[==[v1.0i]===]]"
+   echo "[==[v1.2i]===]]"
    date
    echo ":::::::::::::::"
    echo " "
@@ -19,7 +19,7 @@
    read weblink
    apt install tracepath
    traceroute $weblink
-   echo "jika hasil tidak error artinya website masih aktif"
+   echo "jika hasil tidak error/semua hasil adalah no reply artinya website tidak aktif"
 
 ;;
 
