@@ -1,7 +1,7 @@
 #!/bin/bash
    clear
    echo "ARC_site"
-   echo "[==[v1.6i]===]]"
+   echo "[==[v1.8i]===]]"
    date
    echo ":::::::::::::::"
    echo " "
@@ -83,6 +83,12 @@ clear
  echo "membuat file..."
 clear
 echo " selesai
+
+cd
+cd
+cd arcsite
+bash awb
+
 "
 ;;
 
